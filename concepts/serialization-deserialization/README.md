@@ -76,3 +76,6 @@ data = json.loads(string)
 ## But where ot use JSON and where to use pickle?
 
 Well, `json` format is mainly used when dealing with web apis as the information needs to be in human readabale format. But when the data needs to be transferred over the network the pickle module is used the binary format is preferred for transmitting data.
+
+
+`seek` funciton is used to change the location of the file pointer whereas the `tell` function returns the current location of the file pointer.
