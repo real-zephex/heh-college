@@ -130,3 +130,17 @@ arr2 = np.array([[5, 6], [7, 8]])
 joined_arr = np.concatenate((arr1, arr2))
 
 print(joined_arr)
+
+# Linespcaes : used to create a sequence of evenly spaced numbers over a specified range.
+
+"""
+Syntax:
+  np.linespace(start, stop, quantity)
+
+Example:
+  np.linespace(1, 10, 5)
+  It will generate 5 evenly spaced numbers between 1 to 10
+"""
+
+evenly_spaced = np.linspace(0, 10, 5)
+print(evenly_spaced)
