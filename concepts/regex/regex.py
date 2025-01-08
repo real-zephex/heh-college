@@ -29,3 +29,32 @@ E.g.: re.I : ignore case
 
 """
 
+import re
+
+# Basic pattern matching examples
+def regex_examples():
+    # Search for digits
+    text = "My phone number is 123-456-7890"
+    pattern = r"\d{3}-\d{3}-\d{4}"
+    match = re.search(pattern, text)
+    print(f"Phone number found: {match.group() if match else 'Not found'}")
+
+    # Email validation
+    email = "user@example.com"
+    email_pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    is_valid = re.match(email_pattern, email)
+    print(f"Email is valid: {bool(is_valid)}")
+
+    # Split example
+    text = "apple,banana;orange:grape"
+    split_result = re.split(r'[,;:]', text)
+    print(f"Split result: {split_result}")
+
+    # Substitution example
+    text = "Replace all numbers 123 and 456"
+    new_text = re.sub(r'\d+', 'X', text)
+    print(f"After substitution: {new_text}")
+
+if __name__ == "__main__":
+    regex_examples()
+
